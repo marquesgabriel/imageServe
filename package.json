@@ -9,7 +9,7 @@
     "mongoose": "~3.6.13"
   },
   "scripts": {
-    "start": "node serve.js",
+    "start": "node serve.js"
   },
   "engine": {
     "node": "*",
