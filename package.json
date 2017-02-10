@@ -1,5 +1,7 @@
 {
+  "version": "0.0.1",
   "name": "image-api",
+  "description": "Node.js sample app for OpenShift 3",
   "main": "serve.js",
   "dependencies": {
     "body-parser": "~1.0.1",
@@ -8,5 +10,13 @@
   },
   "scripts": {
     "start": "node serve.js",
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/marquesgabriel/imageServ.git"
   }
 }
