@@ -23,6 +23,7 @@ var fs = require('fs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// var port = process.env.PORT || 6969;        // set our port
 var port = process.env.PORT || 8080;        // set our port
 
 // ROUTES FOR OUR API
@@ -40,12 +41,13 @@ router.get('/', function(req, res) {
     if(fs.existsSync('images/'+param+'.jpg')) {
       res.sendFile(__dirname + '/images/'+param+'.jpg');
     }else{
-      res.sendFile(__dirname + '/images/not-found.jpg');
+      // res.sendFile(__dirname + '/images/not-found.jpg');
+      res.status(404).send('Not found');
     }
   }else{
-    res.sendFile(__dirname + '/images/not-found.jpg');
+    // res.sendFile(__dirname + '/images/not-found.jpg');
+    res.status(404).send('Not found');
   }
-  // res.json({ message: 'hooray! welcome to our api!' });   
 });
 
 // more routes for our API will happen here
